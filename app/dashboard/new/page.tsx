@@ -66,7 +66,7 @@ export default function NewArticlePage() {
         </button>
       </form>
       <Link href="/dashboard">
-        <button className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400">
+        <button className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400 mt-5">
           Kembali ke Dashboard
         </button>
       </Link>
