@@ -1,3 +1,7 @@
+## Commit Tanggal 27/07/2025
+## https://github.com/RickyIG/nextauthjs-fullstack-rickyig/commit/636014555d746686bf91a9f3578cc63031133590
+## Gunakan : https://github.com/RickyIG/nextauthjs-fullstack-rickyig/tree/636014555d746686bf91a9f3578cc63031133590
+
 ## Cara penggunaan:
 
 ```pnpm install```
@@ -16,6 +20,7 @@ Kemudian, setting .env dengan:
 ```pnpm dlx prisma generate```
 
 ```pnpm run dev```
+
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
