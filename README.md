@@ -1,3 +1,23 @@
+## Cara penggunaan:
+
+```pnpm install```
+
+Kemudian, setting .env dengan:
+- .env yang ada di NeonDB
+- .env tambahan:
+  - EMAIL_FROM, 
+  - EMAIL_PASSWORD (didapat dari Google Account Settings > Sandi Aplikasi),
+  - NEXTAUTH_SECRET (didapat dari ```openssl rand -base64 32```)
+  - BASE_URL=http://localhost:3000
+
+
+```pnpm dlx prisma migrate dev```
+
+```pnpm dlx prisma generate```
+
+```pnpm run dev```
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
