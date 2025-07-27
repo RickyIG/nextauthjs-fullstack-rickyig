@@ -7,7 +7,7 @@ export default async function ArticlePage({
   params: { slug: string };
 }) {
   const prisma = new PrismaClient();
-  const { slug } = await params;
+  const { slug } = params;
 
   const article = await prisma.articles.findUnique({
     where: { slug },
