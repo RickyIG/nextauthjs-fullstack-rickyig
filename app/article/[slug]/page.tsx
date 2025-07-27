@@ -1,16 +1,17 @@
 import { PrismaClient } from "@/app/generated/prisma";
 import { notFound } from "next/navigation";
 
-type tParams = Promise<{ slug: string[] }>;
+type Props = {
+  params: { slug: string };
+};
 
-export default async function ArticlePage({ params }: { params: tParams }) {
-  const { slug }: { slug: string[] } = await params;
-  const articleSlug = slug[0]; // Sesuaikan index jika struktur slug array berbeda
-
+export default async function ArticlePage({ params }: Props) {
   const prisma = new PrismaClient();
 
+  const { slug } = await params;
+
   const article = await prisma.articles.findUnique({
-    where: { slug: articleSlug },
+    where: { slug },
     include: { author: true },
   });
 
