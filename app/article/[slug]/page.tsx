@@ -1,13 +1,12 @@
 import { PrismaClient } from "@/app/generated/prisma";
 import { notFound } from "next/navigation";
 
-type Props = {
+export default async function ArticlePage({
+  params,
+}: {
   params: { slug: string };
-};
-
-export default async function ArticlePage({ params }: Props) {
+}) {
   const prisma = new PrismaClient();
-
   const { slug } = await params;
 
   const article = await prisma.articles.findUnique({
