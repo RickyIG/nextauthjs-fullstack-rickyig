@@ -67,7 +67,7 @@ export default function Page(){
         <form className="">
             <div className="mb-3">  
               <h5 className="text-xl font-medium text-gray-900 text-center mb-2">Enter verification OTP</h5>
-              <p className="text-center text-[14px] text-gray-500 mb-2">We&apos;ve send a code to <span className="font-bold text-gray-700">hanif.akmaludin12@gmail.com</span></p>
+              <p className="text-center text-[14px] text-gray-500 mb-2">We&apos;ve send a code to <span className="font-bold text-gray-700">{ email }</span></p>
               { alert.isShow && (
                 <BaseAlert alert={{ type: alert.type, message: alert.message }} />
               )}
