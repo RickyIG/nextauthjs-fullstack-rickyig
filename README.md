@@ -14,6 +14,45 @@ Kemudian, setting .env dengan:
   - NEXTAUTH_SECRET (didapat dari ```openssl rand -base64 32```)
   - BASE_URL=http://localhost:3000
 
+Berikut format .env:
+```
+#.env dari NeonDB
+# Recommended for most uses
+DATABASE_URL=
+
+# For uses requiring a connection without pgbouncer
+DATABASE_URL_UNPOOLED=
+
+# Parameters for constructing your own connection string
+PGHOST=
+PGHOST_UNPOOLED=
+PGUSER=
+PGDATABASE=
+PGPASSWORD=
+
+# Parameters for Vercel Postgres Templates
+POSTGRES_URL=
+POSTGRES_URL_NON_POOLING=
+POSTGRES_USER=
+POSTGRES_HOST=
+POSTGRES_PASSWORD=
+POSTGRES_DATABASE=
+POSTGRES_URL_NO_SSL=
+POSTGRES_PRISMA_URL=
+
+# Neon Auth environment variables for Next.js
+NEXT_PUBLIC_STACK_PROJECT_ID=
+NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY=
+STACK_SECRET_SERVER_KEY=
+
+# .env tambahan
+EMAIL_FROM=
+EMAIL_PASSWORD=
+NEXTAUTH_SECRET=
+BASE_URL=
+```
+
+Selanjutnya:
 
 ```pnpm dlx prisma migrate dev```
 
