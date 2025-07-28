@@ -30,20 +30,13 @@ import { PrismaClient } from "@/app/generated/prisma";
 import { notFound } from "next/navigation";
 import type { Metadata, ResolvingMetadata } from 'next';
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
+type Params = Promise<{ slug: string }>;
 
 // Bungkus handler utama agar sesuai dengan ekspektasi kamu (params sebagai Promise)
-export default async function ArticlePage(_props: { params: { slug: string } }) {
-  // Force: bungkus _props.params menjadi Promise agar bisa di-"await"
-  const props: Props = {
-    params: Promise.resolve(_props.params),
-  };
-
+export default async function ArticlePage({ params }: { params: Params }) {
   const prisma = new PrismaClient();
 
-  const { slug } = await props.params;
+  const { slug } = await params;
 
   const article = await prisma.articles.findUnique({
     where: { slug },
